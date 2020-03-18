@@ -17,7 +17,7 @@ campoFiltro.addEventListener('input', function () {
           * Os parametros são: 1. O que você quer buscar; 2. Se os valores são caseSentive ou não
           */
 
-         var expressao = RegExp(this.value, 'i');
+         var expressao = new RegExp(this.value, 'i');
 
          if (!expressao.test(nome)) {
             paciente.classList.add('invisivel');

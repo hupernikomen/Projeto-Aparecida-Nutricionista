@@ -1,3 +1,5 @@
+// OS COMENTARIOS POSTADOS NESSE ARQUIVO SÃO PARA CONSULTA DE ESTUDO
+
 var botaoEnviar = document.querySelector('#adicionar-paciente');
 var mensagemErro = document.querySelector('#mensagem-erro')
 

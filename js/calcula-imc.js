@@ -1,35 +1,40 @@
+// OS COMENTARIOS POSTADOS NESSE ARQUIVO SÃO PARA CONSULTA DE ESTUDO
+
 var pacientes = document.querySelectorAll('.paciente')
 
-pacientes.forEach(paciente => {
+// Valida PESO e ALTURA e calcula o IMC
+pacientes.forEach(paciente => {  // arr.forEach...
 
 	var peso = paciente.querySelector('.info-peso').textContent;
 	var altura = paciente.querySelector('.info-altura').textContent;
-
 	var imc = paciente.querySelector('.info-imc')
 
-	var pesoInfo = validaPeso(peso);
-	var alturaInfo = validaAltura(altura);
+	var pesoInfo = validaPeso(peso); // TRUE ou FALSE
+	var alturaInfo = validaAltura(altura); // TRUE ou FALSE
 
-	if (!pesoInfo) {
-		console.log("PESO INVALIDO!");
+	if (!pesoInfo) { // SE FOR FALSE
 		imc.textContent = "INVALIDO";
 		pesoInfo = false;
 		paciente.classList.add('paciente-invalido'); // adiciona uma .classe a tr
 	}
 
-	if (!alturaInfo) {
-		console.log("ALTURA INVALIDA!");
+	if (!alturaInfo) { // SE FOR FALSE
 		imc.textContent = "INVALIDA"
 		alturaInfo = false;
 		paciente.classList.add('paciente-invalido'); // adiciona uma .classe a tr
 	}
 
-	if (pesoInfo && alturaInfo) {
+	if (pesoInfo && alturaInfo) {  // So calcula o IMC caso PESO e ALTURA estejam TRUE
 		var imcCalculo = calculaImc(peso, altura);
 		imc.textContent = imcCalculo;
 	}
 
 });
+
+/**
+ * As funções a seguir apresentam um retorno
+ * Esse retorno que será repassado às variaveis como resultados
+ */
 
 function validaPeso(peso) {
 
@@ -51,10 +56,10 @@ function validaAltura(altura) {
 
 }
 
-function calculaImc(peso, altura) {
+function calculaImc(peso, altura) {  
 
 	var imcCalculo;
 	imcCalculo = peso / (altura * altura);
-	return imcCalculo.toFixed(2)
+	return imcCalculo.toFixed(2)  // retorna o resultado do calculo de IMC
 
 }

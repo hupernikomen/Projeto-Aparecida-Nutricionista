@@ -29,3 +29,11 @@ Curso Javascript Alura - Basico
 + Como os eventos propagam pelo DOM;
 + O .setTimeout;
 + Filtros com Expressoes regulares usando o 'new RegExp()';
++ Como fazer uma requisição assíncrona com o Javascript;
++ O objeto XMLHttpRequest;
++ Como configurar e enviar uma requisição
++ O evento de 'load';
++ AJAX;
++ O formato JSON;
++ Função JSON.parse();
++ Erros durante o AJAX;
